@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/GuiTheDev/Lyrics-Bot#readme",
   "dependencies": {
+    "@green-code/music-track-data": "^2.0.3",
     "discord.js": "^13.6.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "music-info": "^1.2.1",
+    "songlyrics": "^2.2.4"
   }
 }
