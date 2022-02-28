@@ -1,0 +1,31 @@
+{
+  "name": "lyricsbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuiTheDev/Lyrics-Bot.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "lyrics",
+    "songs",
+    "song",
+    "music"
+  ],
+  "author": "Guilherme Macedo - GuiTheDev",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/GuiTheDev/Lyrics-Bot/issues"
+  },
+  "homepage": "https://github.com/GuiTheDev/Lyrics-Bot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  }
+}
