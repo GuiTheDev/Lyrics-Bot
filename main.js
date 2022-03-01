@@ -4,9 +4,9 @@ const { channel } = require('diagnostics_channel');
 
 const Discord = { Client, Intents, DiscordAPIError, MessageEmbed} = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-const prefix = '-';;
-const sl = require('songlyrics').default
 require('dotenv').config({ path: '.env' });
+const prefix = process.env.PREFIX
+const sl = require('songlyrics').default
 
 
 const token = process.env.TOKEN
@@ -27,9 +27,10 @@ client.on("message", (message) => {
     console.log(command)
     console.log(args)
 
+    if(!args[1]) return message.reply('Please provide the song title');
+
 //Uses the findthelyrics module to search the lyrics by scraping genius and MusixMatch as a fallback
     if (command === '-lyrics') {
-        
         sl(themusic)
             .then((lyrics => {
                   
@@ -48,7 +49,7 @@ client.on("message", (message) => {
                
             }))
             .catch(console.warn)
-
+            
 
         
     } 
