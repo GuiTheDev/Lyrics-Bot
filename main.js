@@ -32,8 +32,17 @@ client.on("message", (message) => {
         
         sl(themusic)
             .then((lyrics => {
-                console.log(lyrics)
-                
+                  
+                console.log(lyrics.lyrics)
+                for(let i = 0; i < lyrics.lyrics.length; i += 2000) {
+                    const toSend = lyrics.lyrics.substring(i, Math.min(lyrics.lyrics.length, i + 2000));
+                          const lyricsEmbed = new MessageEmbed()
+                            .setColor('#ffff00')
+                            .setTitle(`Lyrics`)
+                            .setDescription(toSend)
+                          message.channel.send({ embeds: [lyricsEmbed] })
+                        
+                }
 
 
                
